@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
 
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial; }
+
+        body {
+            height: 100vh;
+            color: white;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+            animation: bg 10s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes bg {
+            0% { transform: translate(0,0); }
+            50% { transform: translate(-25%, -25%); }
+            100% { transform: translate(0,0); }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 50px;
+            background: rgba(0,0,0,0.4);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li { margin-left: 25px; }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover { color: yellow; }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+        }
+
+        .contact-box {
+            background: rgba(0,0,0,0.5);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h2 { margin-bottom: 20px; }
+
+        p { font-size: 18px; margin: 10px 0; }
+
+        .highlight { color: yellow; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h1>My Portfolio</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+        <li><a href="enquire.html">Enquire</a></li>
+    </ul>
+</nav>
+
+<div class="contact-container">
+    <div class="contact-box">
+        <h2>Contact Me</h2>
+
+        <p>Email: <span class="highlight">your@email.com</span></p>
+        <p>Phone: <span class="highlight">+91 9876543210</span></p>
+        <p>Location: <span class="highlight">Pune, India</span></p>
+
+        <p>You can also reach out through the enquiry form.</p>
+    </div>
+</div>
+
+</body>
+</html>
