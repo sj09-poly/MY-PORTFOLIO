@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            height: 100;
+            overflow: hidden;
+            color: white;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+            animation: gradientMove 10s infinite linear;
+            z-index: -1;
+        }
+        @keyframes gradientMove {
+            0% { transform: translate(0,0); }
+            50% { transform: translate(-25%, -25%); }
+            100% { transform: translate(0,0); }
+        }
+        nav {
+            width: 100%;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.4);
+        }
+        nav h1 {
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 25px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: yellow;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 85vh;
+            padding: 40px;
+        }
+        .left img {
+            width: 250px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .right {
+            margin-left: 50px;
+            max-width: 600px;
+        }
+        .right h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        .right p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .highlight {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>My Portfolio</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="enquire.html">Enquire</a></li>
+        </ul>
+    </nav>
 
+  <div class="container">
+        <div class="left">
+
+            <img src="your-MyPhoto.jpg" alt="My Photo">
+        </div>
+
+        <div class="right">
+            <h2>Hello, I'm a <b>Future Developer</b></h2>
+            <p>
+                I am currently pursuing a Diploma in Information Technology at AISSMS Polytechnic.
+                I have scored <b>87% in my first semester</b>.
+            </p>
+
+            <p>
+                I am passionate about coding and have strong skills in 
+                <b><u>C, Python, JavaScript, and HTML</u></b>.
+            </p>
+
+            <p>
+                My goal is to become a professional developer and build impactful software solutions.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
